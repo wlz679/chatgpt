@@ -1,0 +1,55 @@
+{
+  "name": "sz_web_vue3",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:test": "vite --mode test",
+    "dev:production": "vite --mode production",
+    "build": "vue-tsc && vite build",
+    "build:test": "vue-tsc && vite build --mode test",
+    "build:production": "vue-tsc && vite build --mode production",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "@antv/g6": "^4.8.21",
+    "@element-plus/icons-vue": "^2.3.1",
+    "axios": "^1.6.2",
+    "dayjs": "^1.11.10",
+    "echarts": "^5.4.3",
+    "element-plus": "^2.4.3",
+    "file-saver": "^2.0.5",
+    "howler": "^2.2.3",
+    "html2canvas": "^1.4.1",
+    "path": "^0.12.7",
+    "pinia": "^2.1.7",
+    "sass": "^1.69.5",
+    "screenfull": "^6.0.2",
+    "tiny-emitter": "^2.1.0",
+    "vite-plugin-style-import": "^2.0.0",
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@types/sass": "^1.45.0",
+    "@types/vue-router": "^2.0.0",
+    "@vitejs/plugin-vue": "^4.5.2",
+    "gh-pages": "^6.1.1",
+    "less": "^4.2.0",
+    "sass-loader": "^10.0.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.9",
+    "vue-tsc": "^1.8.25",
+    "webpack": "^5.0.0"
+  },
+  "eslintConfig": {
+    "globals": {
+      "AMap": true
+    }
+  }
+}
