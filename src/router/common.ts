@@ -6,6 +6,10 @@ const commonRoutes: RouteRecordRaw[] = [
     path: "/home",
     component: () => import("../views/home/index.vue"),
   },
+  {
+    path: "/buyGptPLus",
+    component: () => import("../views/gptPlus/buyPlus.vue"),
+  },
 ];
 
 export default commonRoutes;
