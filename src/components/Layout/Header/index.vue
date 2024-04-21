@@ -83,6 +83,12 @@ watch(
   height: 70px;
   padding: 0 20px;
   margin-bottom: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+
   .left {
     flex: 1;
     display: flex;

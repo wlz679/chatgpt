@@ -197,3 +197,17 @@ ul,ol,dl {
 .yellow {
   color: #ff6600;
 }
+.green {
+  color: green;
+}
+.paragraph {
+  margin-top: 20px;
+}
+
+.small-nav {
+  padding: 20px;
+  height: 100vh;
+}
+.big-title {
+  width: calc(100vw - 710px);
+}

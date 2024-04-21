@@ -11,5 +11,8 @@ import Monitor from "./monitor.vue";
 <style scoped lang="scss">
 .el-menu {
   height: 100%;
+  position: fixed;
+  top: 71px;
+  width: 200px;
 }
 </style>

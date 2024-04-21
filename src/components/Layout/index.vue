@@ -19,6 +19,7 @@ import SubHeader from "./SubHeader/index.vue";
 }
 .main {
   flex: 1;
+  margin-top: 70px;
 }
 .subMenu {
   width: 200px;

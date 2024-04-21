@@ -4,7 +4,6 @@
   <el-menu
     :default-active="activeMenu"
     :collapse-transition="false"
-    :default-openeds="openeds"
     @select="handleMenuSelect"
   >
     <el-sub-menu index="maintain">
@@ -57,16 +56,6 @@ const router = useRouter();
 const route = useRoute();
 
 const activeMenu = ref();
-
-// 默认展开的菜单
-const openeds = [
-  "maintain",
-  "visualization",
-  "trend",
-  "analyze",
-  "device",
-  "record",
-];
 
 const pathMap = {
   deviceManage: "/monitor/maintain/deviceManage",

@@ -10,9 +10,8 @@
         <section id="section1">
           <div class="box">
             <h3 class="big-title">一、ChatGPT Plus 升级服务介绍</h3>
-            <p class="desc">
-              你好，欢迎来到ChatGPT的世界，
-              @林兄GPT（微信：3056978），我这篇文章会讲明白 ChatGPT Plus
+            <p class="desc" style="margin-top: 20px">
+              你好，欢迎来到ChatGPT的世界， 我这篇文章会讲明白 ChatGPT Plus
               到底是怎么样的产品、怎么升级、本站所提供的服务与价格等~
             </p>
           </div>
@@ -78,7 +77,7 @@
               <p class="desc" style="margin-top: 10px">
                 简介：「成品号新号，全程代办交付 360
                 元。一步到位，我给你代办一个新号并升级为
-                Plus。正规充值，稳定好用——海外专线网络开始注册微软outlook邮箱、注册ChatGPT、正规认证的美国银行卡升级PLUS，包售后30天。——
+                Plus。正规充值，稳定好用——海外专线网络开始注册google邮箱、注册ChatGPT、正规认证的美国银行卡升级PLUS，包售后30天。——
                 GPT和邮箱账号都是你的，可修改密码」
               </p>
               <p class="yellow" style="margin-top: 20px">
@@ -313,8 +312,15 @@
             4.2 ChatGPT 账号防封技巧
           </h3>
           <p class="desc" style="margin-top: 20px">
-            ChatGPT Plus 账号为啥被封？可以参考这篇 ChatGPT
-            封号的原因是什么？如何避免？
+            ChatGPT Plus 账号为啥被封？可以参考这篇
+            <el-link
+              class="paragraph"
+              type="primary"
+              target="_blank"
+              style="font-size: 16px; margin-top: -1px"
+              @click="accountBan"
+              >ChatGPT 封号的原因是什么？如何避免？</el-link
+            >
           </p>
           <p class="desc" style="margin-top: 20px">
             的确有正常使用 Plus 账号而被封的情况。需要注意的是：
@@ -557,6 +563,8 @@
 </template>
 
 <script setup lang="ts">
+import router from "@/router";
+
 const scrollToSection = (sectionId: string) => {
   const section = document.getElementById(sectionId);
   if (section) {
@@ -631,6 +639,13 @@ const tableData = [
     plus: "找我升级（微信 3056978），稳定可靠包售后",
   },
 ];
+
+const accountBan = () => {
+  let routeUrl = router.resolve({
+    path: "/accountBan",
+  });
+  window.open(routeUrl.href, "_blank");
+};
 </script>
 <style lang="scss" scoped>
 .content {
@@ -647,7 +662,6 @@ const tableData = [
   margin-bottom: 40px;
 }
 .list {
-  font-size: 14px;
   margin: 20px 0;
   padding-left: 40px;
   list-style: circle;
@@ -661,17 +675,21 @@ const tableData = [
   border-radius: 8px;
 }
 .main-box {
-  padding-right: 350px;
+  width: calc(100vw - 710px);
 }
 .small-nav {
   position: fixed;
   right: 0;
-  top: 100px;
+  top: 0;
+  padding-top: 100px;
 }
 .api-key {
   cursor: pointer;
   &:hover {
     color: rgb(223, 20, 20);
   }
+}
+:deep(.el-anchor__link) {
+  font-size: 14px;
 }
 </style>
